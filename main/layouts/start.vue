@@ -44,7 +44,7 @@
             <div>
                 
                 <NuxtLink to="/about">About</NuxtLink>
-                <NuxtLink to="/about">smth</NuxtLink>
+                <NuxtLink to="/about">Contact</NuxtLink>
                 <NuxtLink to="/about">smth</NuxtLink>
                 <NuxtLink to="/about">smth</NuxtLink>
             </div>
