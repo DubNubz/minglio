@@ -48,7 +48,8 @@ const words = ["Free", "Safe", "Fast", "Quick", "Anonymous", "Secure", "Fun", "S
   "Rewarding", "Complimentary", "Convivial", "Courteous", "Considerate", "Kind", "Sympathetic", "Understanding", "Welcoming", "Inclusive",
   "Broadening", "Holistic", "Innovative", "Open-Minded", "Reflective", "Tolerant", "Accepting", "Comprehensible", "Perceptive", "Astute", "Clever", "Persuasive"
 ];
-const currentWord = ref("Free")
+const currentWord = ref("");
+const previousWord = ref("");
 
 definePageMeta({
     layout: 'start'
@@ -60,8 +61,20 @@ onMounted(() => {
 
 async function changeWord () {
   while (true) {
-    currentWord.value = getRandomItemFromArray(words);
-    await delay(100);
+    const word = getRandomItemFromArray(words);
+    if (word == previousWord.value) continue;
+    else previousWord.value = word;
+
+    for (let character of word) {
+      currentWord.value += character;
+      await delay(40);
+    }
+    await delay(300);
+    for (let character of word) {
+      currentWord.value = currentWord.value.slice(0, currentWord.value.length - 1);
+      await delay(20);
+    }
+    await delay(50);
   }
 }
 

@@ -41,13 +41,10 @@
         <slot />
         
         <footer>
-            <div>
-                
-                <NuxtLink to="/about">About</NuxtLink>
-                <NuxtLink to="/about">Contact</NuxtLink>
-                <NuxtLink to="/about">smth</NuxtLink>
-                <NuxtLink to="/about">smth</NuxtLink>
-            </div>
+            <NuxtLink to="/about" class="footerButton">About</NuxtLink>
+            <NuxtLink to="/about" class="footerButton">Contact</NuxtLink>
+            <NuxtLink to="/about" class="footerButton">smth</NuxtLink>
+            <NuxtLink to="/about" class="footerButton">smth</NuxtLink>
         </footer>
     </div>
 </template>
@@ -155,20 +152,17 @@ nav {
 
 footer {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 2em;
     width: 100%;
     background-color: var(--bodyColor);
     transition: background-color 0.75s;
     margin-top: 5em;
     margin-bottom: 3em;
 
-    div {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 2em;
+    .footerButton {
+        transition: all 0.25s;
     }
 }
 
@@ -195,6 +189,13 @@ footer {
         .login:hover {
             color: black;
             background-color: var(--minglioGreen);
+        }
+    }
+
+    footer {
+        .footerButton:hover {
+            color: var(--minglioGreen);
+            text-decoration: underline;
         }
     }
 }
