@@ -18,16 +18,20 @@
     <div class="features">
       <div class="feature">
         <h1>Safety</h1>
-        <p>We care about your safety blah blah blah</p>
+        <p>smth</p>
       </div>
       <div class="feature">
         <h1>Privacy</h1>
-        <p>We care about your safety blah blah blah</p>
+        <p>We value user privacy! We do not use cookies to collect user data.</p>
       </div>
       <div class="feature">
         <h1>Anonymity</h1>
-        <p>We care about your safety blah blah blah</p>
+        <p>smth</p>
       </div>
+    </div>
+
+    <div class="">
+
     </div>
   </div>
 </template>
@@ -141,7 +145,7 @@ async function changeWord () {
   background-color: var(--secondaryBodyColor);
   margin-top: 5em;
   padding-top: 5em;
-  padding-bottom: 3em;
+  padding-bottom: 5em;
   width: 100vw;
   display: flex;
   flex-direction: column;

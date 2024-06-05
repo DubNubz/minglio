@@ -37,7 +37,18 @@
             </div>
             <div class="divider"></div>
         </header>
+        
         <slot />
+        
+        <footer>
+            <div>
+                
+                <NuxtLink to="/about">About</NuxtLink>
+                <NuxtLink to="/about">smth</NuxtLink>
+                <NuxtLink to="/about">smth</NuxtLink>
+                <NuxtLink to="/about">smth</NuxtLink>
+            </div>
+        </footer>
     </div>
 </template>
 
@@ -140,6 +151,25 @@ nav {
         height: 2em;
     }
 
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: var(--bodyColor);
+    transition: background-color 0.75s;
+    margin-top: 5em;
+    margin-bottom: 3em;
+
+    div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2em;
+    }
 }
 
 @media (hover: hover) and (pointer: fine) {
