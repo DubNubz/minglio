@@ -1,6 +1,7 @@
 <template>
     <div class="credits">
-        <h2>Meet the team</h2>
+        <h2>Meet the Team</h2>
+        <p>We're humans too!</p>
         <div class="profiles">
             <div class="names">
                 <div @click="currentPerson = profile" class="nameHolder" v-for="profile in profiles" :class="{ activeName: currentPerson?.name == profile.name }">
@@ -48,9 +49,11 @@ const profiles: Profile[] = [{
     img: ""
 }];
 
-const currentPerson = ref<Profile> ();
-
-watch(() => currentPerson.value, () => console.log(currentPerson.value))
+const currentPerson = ref<Profile> ({
+    name: "Kenneth Ng",
+    role: ["Co-Founder", "Lead Developer"],
+    img: ""
+});
 
 </script>
 
@@ -68,7 +71,7 @@ watch(() => currentPerson.value, () => console.log(currentPerson.value))
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 3em;
+    margin-top: 2em;
     background-color: var(--secondaryBodyColor);
     padding: 2em;
     border-radius: 1em;
