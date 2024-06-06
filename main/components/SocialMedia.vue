@@ -4,11 +4,12 @@
         <p>Feel free to reach out to us!</p>
         <div class="socials">
             <div class="social" v-for="social in socials">
-                <a :href="social.link" target="_blank"><h3>{{ social.name }}</h3></a>
+                <a :href="social.link" target="_blank"><h3 :style="{ color: social.color }">{{ social.name }}</h3></a>
                 <a :href="social.link" target="_blank"><p>{{ social.at }}</p></a>
                 <img :src="social.img" :alt="`Click to visit our ${social.name} page!`">
-                <a :href="social.link" target="_blank" class="visit">
-                    <p>Visit</p>
+                <a :href="social.link" target="_blank" class="visit"
+                :class="{ twitter: social.name == 'Twitter/X', instagram: social.name == 'Instagram', discord: social.name == 'Discord', reddit: social.name == 'Reddit' }">
+                    <p>{{ social.name == 'Discord' ? 'Join' : 'Visit' }}</p>
                 </a>
             </div>
         </div>
@@ -22,28 +23,33 @@ type Social = {
     img: string;
     at: string;
     link: string;
+    color: string;
 }
 
 const socials: Social[] = [{
     name: "Twitter/X",
     img: "/icons/twitter.svg",
     at: "@Minglio_Official",
-    link: "https://x.com/Minglio_Offical"
+    link: "https://x.com/Minglio_Offical",
+    color: "#00ACED"
 }, {
     name: "Instagram",
     img: "/icons/instagram.svg",
     at: "@minglio_official",
-    link: "https://www.instagram.com/minglio_official/"
+    link: "https://www.instagram.com/minglio_official/",
+    color: "#DD2A7B"
 }, {
     name: "Discord",
     img: "/icons/discord.svg",
     at: "Minglio Server",
-    link: "https://discord.gg/SKzcjMTxts"
+    link: "https://discord.gg/SKzcjMTxts",
+    color: "#6665D2"
 }, {
     name: "Reddit",
     img: "/icons/reddit.svg",
     at: "r/minglio",
-    link: "https://www.reddit.com/r/minglio/"
+    link: "https://www.reddit.com/r/minglio/",
+    color: "#FF3A00"
 }]
 
 </script>
@@ -77,7 +83,6 @@ const socials: Social[] = [{
         transition: background-color 0.5s;
 
         h3 {
-            color: var(--minglioBlue);
             transition: all 0.25s;
         }
 
@@ -93,7 +98,6 @@ const socials: Social[] = [{
         .visit {
             margin-top: 2em;
             background-color: transparent;
-            border-color: var(--minglioGreen);
             border-style: solid;
             border-width: 0.2em;
             padding: 0.5em;
@@ -101,6 +105,19 @@ const socials: Social[] = [{
             padding-right: 2em;
             border-radius: 1em;
             transition: all 0.25s;
+        }
+
+        .twitter {
+            border-color: #00ACED;
+        }
+        .instagram {
+            border-color: #DD2A7B;
+        }
+        .discord {
+            border-color: #6665D2;
+        }
+        .reddit {
+            border-color: #FF3A00;
         }
     }
 }
@@ -113,8 +130,23 @@ const socials: Social[] = [{
             }
 
             .visit:hover {
-                color: black;
                 background-color: var(--minglioGreen);
+            }
+
+            .twitter:hover {
+                color: black;
+                background-color: #00ACED;
+            }
+            .instagram:hover {
+                color: white;
+                background-color: #DD2A7B;
+            }
+            .discord:hover {
+                color: white;
+                background-color: #6665D2;
+            }
+            .reddit:hover {
+                background-color: #FF3A00;
             }
         }
     }
