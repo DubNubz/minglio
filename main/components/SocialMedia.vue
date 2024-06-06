@@ -1,12 +1,13 @@
 <template>
     <div class="socialMedia">
         <h2>Our Official Socials</h2>
+        <p>Feel free to reach out to us!</p>
         <div class="socials">
             <div class="social" v-for="social in socials">
-                <a :href="social.link"><h3>{{ social.name }}</h3></a>
-                <a :href="social.link"><p>{{ social.at }}</p></a>
+                <a :href="social.link" target="_blank"><h3>{{ social.name }}</h3></a>
+                <a :href="social.link" target="_blank"><p>{{ social.at }}</p></a>
                 <img :src="social.img" :alt="`Click to visit our ${social.name} page!`">
-                <a :href="social.link" class="visit">
+                <a :href="social.link" target="_blank" class="visit">
                     <p>Visit</p>
                 </a>
             </div>
@@ -24,11 +25,6 @@ type Social = {
 }
 
 const socials: Social[] = [{
-    name: "Discord",
-    img: "/icons/discord.svg",
-    at: "Minglio Server",
-    link: "https://discord.gg/SKzcjMTxts"
-}, {
     name: "Twitter/X",
     img: "/icons/twitter.svg",
     at: "@Minglio_Official",
@@ -38,6 +34,11 @@ const socials: Social[] = [{
     img: "/icons/instagram.svg",
     at: "@minglio_official",
     link: "https://www.instagram.com/minglio_official/"
+}, {
+    name: "Discord",
+    img: "/icons/discord.svg",
+    at: "Minglio Server",
+    link: "https://discord.gg/SKzcjMTxts"
 }, {
     name: "Reddit",
     img: "/icons/reddit.svg",
@@ -73,6 +74,7 @@ const socials: Social[] = [{
         width: 15em;
         padding: 1em;
         border-radius: 1em;
+        transition: background-color 0.5s;
 
         img {
             width: 5em;
@@ -80,6 +82,7 @@ const socials: Social[] = [{
             padding: 0.5em;
             border-radius: 1em;
             background-color: var(--scrollbarTrack);
+            transition: background-color 0.5s;
         }
 
         .visit {

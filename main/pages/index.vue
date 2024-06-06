@@ -30,23 +30,21 @@
       </div>
     </div>
 
-    <div class="">
-
-    </div>
+    <Credits />
   </div>
 </template>
 
 <script setup lang="ts">
 
 const words = ["Free", "Safe", "Fast", "Quick", "Anonymous", "Secure", "Fun", "Silly", "Engaging", "Insightful", "Enlightening", "Stimulating",
-  "Inspiring", "Productive", "Constructive", "Enriching", "Refreshing", "Thoughtful", "Encouraging", "Supportive", "Uplifting", "Motivating",
-  "Empowering", "Illuminating", "Revealing", "Informative", "Educational", "Eye-Opening", "Heartwarming", "Fulfilling", "Valuable", "Beneficial",
+  "Inspiring", "Constructive", "Enriching", "Refreshing", "Thoughtful", "Encouraging", "Supportive", "Uplifting", "Motivating",
+  "Empowering", "Revealing", "Informative", "Educational", "Eye-Opening", "Heartwarming", "Fulfilling", "Valuable",
   "Positive", "Collaborative", "Friendly", "Respectful", "Harmonious", "Cordial", "Pleasant", "Enjoyable", "Lively", "Animated", "Vibrant",
-  "Dynamic", "Amicable", "Cheerful", "Lighthearted", "Affable", "Compelling", "Fascinating", "Captivating", "Intriguing", "Engrossing", "Rich",
-  "Profound", "Deep", "Interactive", "Heartening", "Comforting", "Invigorating", "Engaged", "Gratifying", "Luminous", "Nourishing", "Affirming",
-  "Delightful", "Resonant", "Gracious", "Optimistic", "Joyful", "Amusing", "Radiant", "Hopeful", "Calming", "Soothing", "Reassuring", "Exciting",
-  "Rewarding", "Complimentary", "Convivial", "Courteous", "Considerate", "Kind", "Sympathetic", "Understanding", "Welcoming", "Inclusive",
-  "Broadening", "Holistic", "Innovative", "Open-Minded", "Reflective", "Tolerant", "Accepting", "Comprehensible", "Perceptive", "Astute", "Clever", "Persuasive"
+  "Dynamic", "Cheerful", "Lighthearted", "Compelling", "Fascinating", "Captivating", "Intriguing", "Engrossing", "Rich",
+  "Profound", "Deep", "Interactive", "Heartening", "Comforting", "Invigorating", "Gratifying", "Affirming",
+  "Resonant", "Optimistic", "Joyful", "Amusing", "Hopeful", "Calming", "Soothing", "Reassuring", "Exciting",
+  "Rewarding", "Complimentary", "Courteous", "Considerate", "Kind", "Sympathetic", "Understanding", "Welcoming", "Inclusive",
+  "Broadening", "Holistic", "Innovative", "Open-Minded", "Reflective", "Tolerant", "Accepting", "Comprehensible", "Perceptive", "Persuasive"
 ];
 const currentWord = ref("");
 const previousWord = ref("");
@@ -157,6 +155,7 @@ async function changeWord () {
 .features {
   background-color: var(--secondaryBodyColor);
   margin-top: 5em;
+  margin-bottom: 5em;
   padding-top: 5em;
   padding-bottom: 5em;
   width: 100vw;

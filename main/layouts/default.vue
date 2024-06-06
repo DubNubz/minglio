@@ -42,6 +42,7 @@
         
         <footer>
             <span>2024 Minglio</span>
+            <NuxtLink to="/" class="footerButton" :class="{ activeLink: route.path == '/' }">Home</NuxtLink>
             <NuxtLink to="/info/about" class="footerButton" :class="{ activeLink: route.path == '/info/about' }">About</NuxtLink>
             <NuxtLink to="/info/contact" class="footerButton" :class="{ activeLink: route.path == '/info/contact' }">Contact</NuxtLink>
             <NuxtLink to="/info/support" class="footerButton" :class="{ activeLink: route.path == '/info/support' }">Support</NuxtLink>

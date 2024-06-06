@@ -6,17 +6,18 @@
   --h1: 3.5em;
   --h2: 2.5em;
   --h3: 2em;
-  --h4: 1.75em;
+  --h4: 1.62em;
   --p: 1.5em;
   --standard: 1em;
 }
 
 .light {
-    --minglioGreen: #5eca06;
+    --minglioGreen: #58b908;
     --primary: #70eb0c;
     --headerColorSecondary: #b3bea8;
     --bodyColor: rgb(240, 240, 240);
     --secondaryBodyColor: rgb(220, 220, 220);
+    --tertiaryBodyColor: rgb(200, 200, 200);
     --scrollbarTrack: #dbdbdb;
     --textColor: black;
 }
@@ -27,6 +28,7 @@
     --headerColorSecondary: #4e5349;
     --bodyColor: rgb(25, 25, 25);
     --secondaryBodyColor: rgb(35, 35, 35);
+    --tertiaryBodyColor: rgb(45, 45, 45);
     --scrollbarTrack: #17171c;
     --textColor: white;
 }
