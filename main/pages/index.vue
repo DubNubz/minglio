@@ -122,7 +122,7 @@ async function changeWord () {
 
   h1 {
     .word {
-      color: var(--minglioGreen);
+      color: var(--minglioBlue);
       text-shadow: var(--secondaryBodyColor) 5px 5px;
       transition: all 0.75s;
     }

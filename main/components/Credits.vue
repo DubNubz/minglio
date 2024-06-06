@@ -148,11 +148,11 @@ const currentPerson = ref<Profile> ({
 
         .activeName {
             .name {
-                color: var(--minglioGreen);
+                color: var(--minglioBlue);
             }
             .dividers {
                 .divider {
-                    background-color: var(--minglioGreen);
+                    background-color: var(--minglioBlue);
                 }
             }
         }
@@ -177,11 +177,11 @@ const currentPerson = ref<Profile> ({
         .names {
             .nameHolder:hover {
                 .name {
-                    color: var(--minglioGreen);
+                    color: var(--minglioBlue);
                 }
                 .dividers {
                     .divider {
-                        background-color: var(--minglioGreen);
+                        background-color: var(--minglioBlue);
                     }
                 }
             }

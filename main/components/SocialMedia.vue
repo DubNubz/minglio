@@ -76,6 +76,11 @@ const socials: Social[] = [{
         border-radius: 1em;
         transition: background-color 0.5s;
 
+        h3 {
+            color: var(--minglioBlue);
+            transition: all 0.25s;
+        }
+
         img {
             width: 5em;
             margin-top: 2em;
@@ -103,6 +108,10 @@ const socials: Social[] = [{
 @media (hover: hover) and (pointer: fine) {
     .socials {
         .social {
+            h3:hover {
+                text-decoration: underline;
+            }
+
             .visit:hover {
                 color: black;
                 background-color: var(--minglioGreen);
