@@ -8,7 +8,7 @@
                 <a :href="social.link" target="_blank"><p>{{ social.at }}</p></a>
                 <img :src="social.img" :alt="`Click to visit our ${social.name} page!`">
                 <a :href="social.link" target="_blank" class="visit"
-                :class="{ twitter: social.name == 'Twitter/X', instagram: social.name == 'Instagram', discord: social.name == 'Discord', reddit: social.name == 'Reddit' }">
+                :class="{ twitter: social.name == 'X/Twitter', instagram: social.name == 'Instagram', discord: social.name == 'Discord', reddit: social.name == 'Reddit' }">
                     <p>{{ social.name == 'Discord' ? 'Join' : 'Visit' }}</p>
                 </a>
             </div>
@@ -27,7 +27,7 @@ type Social = {
 }
 
 const socials: Social[] = [{
-    name: "Twitter/X",
+    name: "X/Twitter",
     img: "/icons/twitter.svg",
     at: "@Minglio_Official",
     link: "https://x.com/Minglio_Offical",
@@ -91,7 +91,7 @@ const socials: Social[] = [{
             margin-top: 2em;
             padding: 0.5em;
             border-radius: 1em;
-            background-color: var(--scrollbarTrack);
+            background-color: var(--tertiaryBodyColor);
             transition: background-color 0.5s;
         }
 
@@ -130,19 +130,17 @@ const socials: Social[] = [{
             }
 
             .visit:hover {
+                color: white;
                 background-color: var(--minglioGreen);
             }
 
             .twitter:hover {
-                color: black;
                 background-color: #00ACED;
             }
             .instagram:hover {
-                color: white;
                 background-color: #DD2A7B;
             }
             .discord:hover {
-                color: white;
                 background-color: #6665D2;
             }
             .reddit:hover {

@@ -62,22 +62,14 @@
 
 <script setup lang="ts">
 
-const words = ["Free", "Safe", "Fast", "Quick", "Anonymous", "Secure", "Fun", "Silly", "Engaging", "Insightful", "Enlightening", "Stimulating",
-  "Inspiring", "Constructive", "Enriching", "Refreshing", "Thoughtful", "Encouraging", "Supportive", "Uplifting", "Motivating",
-  "Empowering", "Revealing", "Informative", "Educational", "Eye-Opening", "Heartwarming", "Fulfilling", "Valuable",
-  "Positive", "Collaborative", "Friendly", "Respectful", "Harmonious", "Cordial", "Pleasant", "Enjoyable", "Lively", "Animated", "Vibrant",
-  "Dynamic", "Cheerful", "Lighthearted", "Compelling", "Fascinating", "Captivating", "Intriguing", "Engrossing", "Rich",
-  "Profound", "Deep", "Interactive", "Heartening", "Comforting", "Invigorating", "Gratifying", "Affirming", "Mysterious",
-  "Resonant", "Optimistic", "Joyful", "Amusing", "Hopeful", "Calming", "Soothing", "Reassuring", "Exciting",
-  "Rewarding", "Complimentary", "Courteous", "Considerate", "Kind", "Sympathetic", "Understanding", "Welcoming", "Inclusive",
-  "Broadening", "Holistic", "Innovative", "Open-Minded", "Reflective", "Tolerant", "Accepting", "Comprehensible", "Perceptive", "Persuasive"
-];
+const words = ["Free", "Safe", "Fast", "Quick", "Anonymous", "Secure", "Fun", "Silly", "Engaging", "Insightful", "Enlightening",
+"Inspiring", "Enriching", "Refreshing", "Thoughtful", "Encouraging", "Supportive", "Uplifting", "Motivating", "Empowering", "Informative",
+"Educational", "Eye-Opening", "Heartwarming", "Fulfilling", "Valuable", "Positive", "Collaborative", "Friendly", "Respectful", "Pleasant",
+"Enjoyable", "Lively", "Vibrant", "Dynamic", "Cheerful", "Lighthearted", "Compelling", "Fascinating", "Captivating", "Intriguing", "Profound",
+"Deep", "Comforting", "Mysterious", "Optimistic", "Joyful", "Amusing", "Calming", "Soothing", "Reassuring", "Exciting", "Rewarding", "Kind",
+"Sympathetic", "Understanding", "Welcoming", "Inclusive", "Broadening", "Innovative", "Open-Minded", "Accepting"];
 const currentWord = ref("");
 const previousWord = ref("");
-
-/*definePageMeta({
-    layout: 'start'
-});*/
 
 onMounted(() => {
   changeWord();

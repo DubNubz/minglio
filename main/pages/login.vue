@@ -6,9 +6,14 @@
 
 <script setup lang="ts">
 
-function sendToPage() {
-    // route -> /
-}
+definePageMeta({
+    layout: 'login-layout'
+});
+
+useHead({
+    title: "Log in - Minglio"
+});
+
 </script>
 
 <style lang="scss" scoped>
