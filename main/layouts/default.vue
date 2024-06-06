@@ -62,7 +62,7 @@ const router = useRouter();
 .defaultLayout {
     width: 100vw;
     min-height: 100%;
-    padding-bottom: 8em;
+    padding-bottom: 10em;
 }
 
 header {
