@@ -1,5 +1,5 @@
 <template>
-  <div class="holder">
+  <div class="app">
     <NuxtLayout>
       <NuxtPage/>
     </NuxtLayout>
@@ -26,7 +26,7 @@ onMounted(() => {
 
 <style lang="scss" scoped>
 
-.holder {
+.app {
   min-height: 100vh;
   position: relative;
   display: flex;

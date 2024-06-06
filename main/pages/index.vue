@@ -1,5 +1,5 @@
 <template>
-  <div class="holder">
+  <div class="index">
 
     <div class="title">
       <h1><span class="word">{{ currentWord }}</span> conversations</h1>
@@ -51,9 +51,9 @@ const words = ["Free", "Safe", "Fast", "Quick", "Anonymous", "Secure", "Fun", "S
 const currentWord = ref("");
 const previousWord = ref("");
 
-definePageMeta({
+/*definePageMeta({
     layout: 'start'
-});
+});*/
 
 onMounted(() => {
   changeWord();
@@ -82,7 +82,7 @@ async function changeWord () {
 
 <style lang="scss" scoped>
 
-.holder {
+.index {
   display: flex;
   flex-direction: column;
   align-items: center;
