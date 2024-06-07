@@ -42,7 +42,7 @@ const questions = ["Favorite boba flavor", "Favorite language", "Are you sane"]
 const profiles: Profile[] = [{
     name: "Kenneth Ng",
     role: ["Co-Founder", "Lead Developer", "Head Designer"],
-    answers: ["Mango Tea", "JavaScript", "Yesn't"],
+    answers: ["Mango", "JavaScript", "Yesn't"],
     link: "https://github.com/DubNubz"
 }, {
     name: "XuanTing Lin",
@@ -52,19 +52,19 @@ const profiles: Profile[] = [{
 }, {
     name: "Brandon Yeung",
     role: ["Co-Founder", "Financial Adviser"],
-    answers: [""],
+    answers: ["I hate boba", "Russian", "Ok"],
     link: null
 }, {
     name: "Leo Yang",
     role: ["Co-Founder", "Designer"],
-    answers: [""],
+    answers: ["Taro", "English", "Uhhh"],
     link: null
 }];
 
 const currentPerson = ref<Profile> ({
     name: "Kenneth Ng",
     role: ["Co-Founder", "Lead Developer", "Head Designer"],
-    answers: ["Mango Tea", "JavaScript", "Yesn't"],
+    answers: ["Mango", "JavaScript", "Yesn't"],
     link: "https://github.com/DubNubz"
 });
 

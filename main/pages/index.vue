@@ -23,7 +23,7 @@
           <div class="text">
             <h1>Safety</h1>
             <p>Our top concern is your safety!</p>
-            <p>All chats are limited to 60 seconds,</p>
+            <p>All chats are limited to 90 seconds,</p>
             <p>but can be extended if both parties agree.</p>
             <p>Exiting conversations is trivially easy,</p>
             <p>and we moderate on a case-by-case basis.</p>
