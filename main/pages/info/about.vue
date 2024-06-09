@@ -1,6 +1,6 @@
 <template>
     <div class="contact">
-        <h2>About us</h2>
+        <Mission />
         <Credits />
     </div>
 </template>
@@ -17,19 +17,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
-    p {
-        margin-bottom: 0.25em;
-    }
-
-    h2 {
-        margin-bottom: 2em;
-
-        span {
-            font-size: 1.15em;
-            color: var(--minglioGreen);
-        }
-    }
 }
 
 </style>

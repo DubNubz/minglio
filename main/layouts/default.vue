@@ -27,11 +27,15 @@
                         </svg>
                         <h4>Theme</h4>
                     </button>
-                    <NuxtLink to="/home" class="navButton">
-                        <h4>Continue as guest</h4>
+                    <NuxtLink to="/home" class="navButton" :class="{ activeLink: route.path == '/home' }">
+                        <h4 v-if="!sessionStore().user">Continue as guest</h4>
+                        <h4 v-else>Home</h4>
                     </NuxtLink>
-                    <NuxtLink to="/login" class="navButton login">
+                    <NuxtLink to="/login" class="navButton login" v-if="!sessionStore().user">
                         <h4>Log in</h4>
+                    </NuxtLink>
+                    <NuxtLink to="/account" class="navButton" :class="{ activeLink: route.path == '/account' }" v-if="sessionStore().user">
+                        <h4>Account</h4>
                     </NuxtLink>
                 </nav>
             </div>
@@ -105,6 +109,10 @@ header {
         width: 100%;
         height: 0.15em;
         background-color: var(--headerColorSecondary);
+    }
+
+    .activeLink {
+        color: var(--minglioGreen);
     }
 }
 

@@ -19,8 +19,9 @@ export default defineNuxtConfig({
       ],
       link: [{ rel: "icon", type: "image/svg+xml", href: "/icons/minglioSmall.svg" }],
       script: [
-        { src: 'https://www.googletagmanager.com/gtag/js?id=G-DFFY75B2JK', async: true },
         {
+          src: 'https://www.googletagmanager.com/gtag/js?id=G-DFFY75B2JK', async: true
+        }, {
           hid: 'gtag',
           innerHTML: `
             window.dataLayer = window.dataLayer || [];

@@ -7,15 +7,19 @@
     </div>
 
     <div class="description">
-      <p>Minglio provides a safe and anonymous space to chat and form real connections with random people around the world, all for the low, low cost of FREE. See what the excitement is about!</p>
+      <p>Minglio provides a safe and anonymous space to chat and form real connections with random people around the world,
+        all for the low, low cost of FREE. See what the excitement is about!</p>
     </div>
 
     <div class="startButtons">
-      <NuxtLink to="/login" class="button signUp"><h4>Sign up</h4></NuxtLink>
-      <NuxtLink to="/home" class="button guest"><h4>Continue as guest</h4></NuxtLink>
+      <NuxtLink to="/login?sign-up=1" class="button signUp">
+        <h4 v-if="!sessionStore().user">Sign up</h4>
+        <h4 v-else>Continue</h4>
+      </NuxtLink>
+      <NuxtLink to="/home" class="button guest" v-if="!sessionStore().user"><h4>Continue as guest</h4></NuxtLink>
     </div>
 
-    Signing up with Minglio simply tracks your own statistics. No data is ever shared between users.
+    <span v-if="!sessionStore().user">Signing up with Minglio simply tracks your own statistics. No data is ever shared between users.</span>
 
     <div class="features">
       <div class="featureHolder">
@@ -53,6 +57,8 @@
         </div>
       </div>
     </div>
+
+    <Mission />
 
     <Credits />
 
@@ -111,6 +117,7 @@ async function changeWord () {
   align-items: center;
   justify-content: center;
   margin-top: 5em;
+  text-align: center;
 
   h1 {
     .word {

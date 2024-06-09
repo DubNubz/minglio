@@ -16,11 +16,12 @@
     --minglioBlue: #0ba1f8;
     --primary: #70eb0c;
     --headerColorSecondary: #b3bea8;
-    --bodyColor: rgb(245, 245, 245);
-    --secondaryBodyColor: rgb(225, 225, 225);
-    --tertiaryBodyColor: rgb(205, 205, 205);
+    --bodyColor: rgb(250, 250, 250);
+    --secondaryBodyColor: rgb(235, 235, 235);
+    --tertiaryBodyColor: rgb(220, 220, 220);
     --scrollbarTrack: #dbdbdb;
     --textColor: black;
+    --secondaryTextColor: rgb(70, 70, 70);
 }
 
 .dark {
@@ -33,10 +34,11 @@
     --tertiaryBodyColor: rgb(45, 45, 45);
     --scrollbarTrack: #17171c;
     --textColor: white;
+    --secondaryTextColor: rgb(200, 200, 200);
 }
 
 body {
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
   justify-content: center;

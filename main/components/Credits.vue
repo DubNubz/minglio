@@ -41,7 +41,7 @@ const questions = ["Favorite boba flavor", "Favorite language", "Are you sane"]
 
 const profiles: Profile[] = [{
     name: "Kenneth Ng",
-    role: ["Co-Founder", "Lead Developer", "Head Designer"],
+    role: ["Co-Founder", "Lead Developer", "Lead Designer"],
     answers: ["Mango", "JavaScript", "Yesn't"],
     link: "https://github.com/DubNubz"
 }, {
@@ -56,14 +56,14 @@ const profiles: Profile[] = [{
     link: null
 }, {
     name: "Leo Yang",
-    role: ["Co-Founder", "Designer"],
+    role: ["Co-Founder", "Outreach Coordinator"],
     answers: ["Taro", "English", "Uhhh"],
     link: null
 }];
 
 const currentPerson = ref<Profile> ({
     name: "Kenneth Ng",
-    role: ["Co-Founder", "Lead Developer", "Head Designer"],
+    role: ["Co-Founder", "Lead Developer", "Lead Designer"],
     answers: ["Mango", "JavaScript", "Yesn't"],
     link: "https://github.com/DubNubz"
 });
