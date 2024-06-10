@@ -15,7 +15,13 @@
     "nuxt": "^3.11.2",
     "pinia": "^2.1.7",
     "sass": "^1.77.4",
+    "socket.io": "^4.7.5",
+    "socket.io-client": "^4.7.5",
     "vue": "^3.4.27",
-    "vue-router": "^4.3.2"
+    "vue-router": "^4.3.2",
+    "ws": "^8.17.0"
+  },
+  "devDependencies": {
+    "@types/ws": "^8.5.10"
   }
 }

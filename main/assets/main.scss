@@ -14,6 +14,7 @@
 .light {
     --minglioGreen: #58b908;
     --minglioBlue: #0ba1f8;
+    --red: #ff5050;
     --primary: #70eb0c;
     --headerColorSecondary: #b3bea8;
     --bodyColor: rgb(250, 250, 250);
@@ -22,11 +23,13 @@
     --scrollbarTrack: #dbdbdb;
     --textColor: black;
     --secondaryTextColor: rgb(70, 70, 70);
+    --tertiaryTextColor: rgb(100, 100, 100);
 }
 
 .dark {
     --minglioGreen: #70eb0c;
     --minglioBlue: #0a95e6;
+    --red: #d10000;
     --primary: #3a7906;
     --headerColorSecondary: #4e5349;
     --bodyColor: rgb(25, 25, 25);
@@ -35,6 +38,7 @@
     --scrollbarTrack: #17171c;
     --textColor: white;
     --secondaryTextColor: rgb(200, 200, 200);
+    --tertiaryTextColor: rgb(150, 150, 150);
 }
 
 body {

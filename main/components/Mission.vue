@@ -4,9 +4,9 @@
         <p>In our fast-paced and ever-changing world, we sometimes</p>
         <p>forget about the thing that makes us all human:</p>
         <span><h3>Interacting with our fellow humans.</h3></span>
-        <p style="margin-top: 1.25em;">Some of us can't talk with others.</p>
-        <p>Some of us don't know how to talk with others.</p>
-        <p><strong style="color: var(--minglioGreen);">Our goal at Minglio is to change that.</strong></p>
+        <p style="margin-top: 1.25em;">Some of us don't know how to start a conversation.</p>
+        <p>Some of us don't know how to make that first move.</p>
+        <p><strong style="color: var(--minglioGreen);">Our mission at Minglio is to change that.</strong></p>
     </div>
 </template>
 

@@ -20,11 +20,11 @@
         <slot />
         
         <footer>
-            <span>2024 Minglio</span>
-            <NuxtLink to="/" class="footerButton" :class="{ activeLink: route.path == '/' }">Home</NuxtLink>
+            <span>Minglio</span>
             <NuxtLink to="/info/about" class="footerButton" :class="{ activeLink: route.path == '/info/about' }">About</NuxtLink>
             <NuxtLink to="/info/contact" class="footerButton" :class="{ activeLink: route.path == '/info/contact' }">Contact</NuxtLink>
             <NuxtLink to="/info/support" class="footerButton" :class="{ activeLink: route.path == '/info/support' }">Support</NuxtLink>
+            <NuxtLink to="/info/tos" class="footerButton" :class="{ activeLink: route.path == '/info/tos' }">Terms of Service</NuxtLink>
         </footer>
     </div>
 </template>
