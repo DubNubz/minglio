@@ -8,9 +8,9 @@
 
 <script setup lang="ts">
 import { initializeApp } from 'firebase/app';
+import { doc, getFirestore, updateDoc } from 'firebase/firestore';
 import { getAuth, type User } from 'firebase/auth';
 import { firebaseConfig } from './utils/firebase';
-
 
 watch(() => sessionStore().isDarkMode, (newValue) => {
     document.body.classList.remove(newValue ? "light" : "dark");
@@ -18,9 +18,22 @@ watch(() => sessionStore().isDarkMode, (newValue) => {
     localStorage.setItem("theme", JSON.stringify(newValue ? "dark" : "light"));
 });
 
-onMounted(() => {
+onMounted(async () => {
     const localLogin = localStorage.getItem("login-info");
-    if (localLogin) sessionStore().user = JSON.parse(localLogin) as User;
+    if (localLogin) {
+      const user = JSON.parse(localLogin) as User;
+      sessionStore().user = user;
+
+      console.log(user.getIdTokenResult)
+
+      /*if (user.lastLoginAt)
+
+      const userStreak = 
+      
+      await updateDoc(doc(db, "users", user.uid), {
+        dailyStreak: 0
+      });*/
+    }
   
     const lastUsedTheme = localStorage.getItem("theme");
     if (lastUsedTheme) {
@@ -31,7 +44,6 @@ onMounted(() => {
     document.body.style.display = "flex";
 
     const app = initializeApp(firebaseConfig);
-    const auth = getAuth(app);
 });
 
 </script>

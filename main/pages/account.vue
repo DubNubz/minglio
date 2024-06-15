@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="account">
         <h1>account</h1>
         <h2>Change name</h2>
         <input type="text" placeholder="name" v-model="username">
@@ -22,6 +22,7 @@ watch(() => username.value, (name) => {
 })
 
 onMounted(() => {
+    if (!sessionStore().user) router.push("/home");
     user.value = sessionStore().user;
 });
 
@@ -58,5 +59,13 @@ async function signOutAccount () {
 </script>
 
 <style lang="scss" scoped>
+
+.account {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3em;
+}
 
 </style>

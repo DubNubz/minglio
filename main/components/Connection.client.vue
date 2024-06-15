@@ -9,8 +9,9 @@
     <br>
     <p>If you ever feel unsafe, click the <strong>LEAVE</strong> button to immediately leave the conversation.</p>
 
-    <h3 style="margin-top: 2em;">You are logged in as: <span style="color: var(--minglioBlue);">{{ sessionStore().user?.displayName ?? "anonymous user" }}</span></h3>
+    <h3 style="margin-top: 2em;">You are logged in as: <span style="color: var(--minglioBlue);">{{ sessionStore().user?.displayName ?? "User" }}</span></h3>
     <span v-if="sessionStore().user">Your name will not be shown to other users.</span>
+    <span v-else>Your stats will not be tracked because you do not have an account.</span>
     <button class="join" @click="joinQueue" :class="{ leave: inQueue }">
       <svg width="800px" height="800px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="none">
         <g><path d="M2.23 2.674a.75.75 0 00-.96 1.152L3.578 5.75 1.27 7.674a.75.75 0 00.96 1.152l3-2.5a.75.75 0 000-1.152l-3-2.5zM8.25 5a.75.75 0 000 1.5h6a.75.75 0 000-1.5h-6zM5.5 9.25a.75.75 0 01.75-.75h8a.75.75 0 010 1.5h-8a.75.75 0 01-.75-.75zM6.25 12a.75.75 0 000 1.5h8a.75.75 0 000-1.5h-8z"/></g>

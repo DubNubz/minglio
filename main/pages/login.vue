@@ -35,6 +35,7 @@
 <script setup lang="ts">
 
 import { createUserWithEmailAndPassword, getAuth, signInWithPopup, GoogleAuthProvider, type User, signInWithEmailAndPassword, sendPasswordResetEmail } from 'firebase/auth';
+import { doc, setDoc } from 'firebase/firestore';
 
 const email = ref("");
 const password = ref("");
@@ -93,6 +94,12 @@ async function signUp () {
     try {
         const userCredential = await createUserWithEmailAndPassword(auth, email.value, password.value);
         const user = userCredential.user;
+        await setDoc(doc(db, "users", user.uid), {
+            chatCount: 0,
+            minsChatting: 0,
+            dailyStreak: 0
+        });
+
         sessionStore().user = user;
         localStorage.setItem("login-info", JSON.stringify(user));
         router.push("/home");
@@ -112,6 +119,12 @@ async function signInWithGoogle () {
     try {
         const result = await signInWithPopup(auth, provider);
         const user = result.user;
+        await setDoc(doc(db, "users", user.uid), {
+            chatCount: 0,
+            minsChatting: 0,
+            dailyStreak: 0
+        });
+
         sessionStore().user = user;
         localStorage.setItem("login-info", JSON.stringify(user));
         router.push("/home");
