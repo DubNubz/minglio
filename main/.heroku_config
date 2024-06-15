@@ -1,0 +1,2 @@
+export NODE_WORKING_DIRECTORY='/main'
+export NODE_BUILD_COMMAND='npm run build'
