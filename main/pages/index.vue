@@ -2,6 +2,8 @@
   <div class="index">
 
     <div class="title">
+
+      <h1>agiohsaohig</h1>
       <h1><span class="word">{{ currentWord }}</span> conversations</h1>
       <h1 style="font-size: 5em;">with <span class="strikethrough">strangers</span> <span class="underline">friends</span></h1>
     </div>
